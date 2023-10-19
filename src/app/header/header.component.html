@@ -1,0 +1,32 @@
+<body style="color: aliceblue;">
+
+<nav class="navbar navbar-expand-lg" >
+    <div class="container-fluid text-end">
+      <a class="navbar-brand" href="#"><img src="https://static.vecteezy.com/system/resources/thumbnails/002/114/691/small/online-shop-logo-template-design-illustration-vector.jpg" height="60" width="100" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          
+        </ul>
+      </div>
+     <div *ngIf="login" class="ms-auto">
+      <div (click)="cart()" class="btn btn-dark p-1 me-5">
+          <p>Cart({{count}})<i class="fa-solid fa-cart-shopping"></i></p> 
+      </div>
+      <i (click)="toWishlist()" class="fa-solid fa-2x text-danger fa-heart btn me-5"></i>   
+      <button (click)="logout()"  class="btn btn-dark">Logout</button>
+    </div>
+    </div>
+    
+  </nav>
+      
+</body>

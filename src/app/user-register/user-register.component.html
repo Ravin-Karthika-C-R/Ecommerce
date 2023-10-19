@@ -1,0 +1,30 @@
+<body>
+    <div class="container">
+        <div class="card">
+          <h2>User Sign Up </h2>
+          <form [formGroup]="userRegForm">
+            <label for="username">Username</label>
+            <input type="email" id="username" placeholder="Enter your username" name="emails"  formControlName="email">
+            <!-- <div>
+              <p class="text-center text-danger">Accept only characters</p>
+            </div> -->
+            <label for="password">Password</label>
+            <input type="password" id="password" name="pass" placeholder="Enter your password" formControlName="psw">
+            <!-- <div>
+              <p class="text-center text-danger">Accept only characters and digits</p>
+            </div> -->
+            <button (click)="register()" type="submit">Register</button>
+            
+          </form>
+        </div>
+        
+      </div>
+      
+    </body>
+    <div class="back text-center">
+      <button routerLink="" class="btn btn2">Back to home
+        <i class="fa fa-home" aria-hidden="true"></i>
+      </button>
+      
+    </div>
+    

@@ -1,0 +1,44 @@
+
+<body>
+    <h1 class="mt-2 text-center">Wishlist Items</h1>
+     <table class="table container">
+       <thead>
+         <tr class="table-primary text-center">
+           <th  scope="col">#</th>
+           <th scope="col">Product Name</th>
+           <th scope="col">Descrption</th>
+           <th scope="col">Price</th>
+           <th scope="col">Actions</th>
+           <!-- <th scope="col">Subtotal</th> -->
+         </tr>
+       </thead>
+       <tbody>
+         <tr *ngFor="let i of pdatas, let j=index" class="text-center">
+           <th  scope="row">{{j+1}}</th>
+           <td><h3>
+             {{i.pname}}
+           </h3><br>
+             <img class="w-25" src={{i.image}} alt="" />
+     
+           </td>
+           <td>{{i.description}}</td>
+           <td>{{i.price}}</td>
+           
+           <td class="border p-2 mt-5 text-center">
+             
+             <button (click)="remove(i._id)" class="btn btn-danger w-100"> remove </button><br>
+             <button (click)="addtoCart(i.pId,i._id)" class="btn btn-success w-100 mt-2"> move to cart </button>
+           </td>
+           <!-- <td>{{i.totalPrice}}</td> -->
+           
+     
+         </tr>
+         
+         
+       </tbody>
+     </table>
+     <button routerLink="/admin-home" id="btn1" class="btn  ms-3 mb-3">Back
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+  </button>
+   </body>
+   

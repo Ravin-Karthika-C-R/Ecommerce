@@ -1,0 +1,43 @@
+<!-- <body>
+    <div class="container w-50 text-dark mb-5 mt-4">
+    <form  action="" class="w-100">
+        <h1 class="mb-3  bg-dark text-white text-center">Edit Products</h1>
+
+        <input [(ngModel)]="pdata.pname" placeholder="Product Name" type="text" name="pdtname" id="pdtname" class="form-control mt-2">
+        
+        <input [(ngModel)]="pdata.description" placeholder="Description" type="number" name="cid" id="cid" class="form-control mt-2">
+       
+        <input [(ngModel)]="pdata.price" placeholder="Price" type="text" name="description" id="description" class="form-control mt-2">
+        
+        <input [(ngModel)]="pdata.image" placeholder="image" type="number" name="price" id="price" class="form-control mt-2">
+       
+        <input [(ngModel)]="pdata.rating" placeholder="Rating" type="number" name="rating" id="rating" class="form-control mt-2">
+        
+        <input [(ngModel)]="pdata.count" placeholder="Count" type="text" name="item" id="item" class="form-control mt-2">
+        
+        <button (click)="update()" class="btn btn-info p-2 mt-5 w-50 mb-5 text-center">Update</button>
+    </form>
+</div>
+<button routerLink="/admin-product-mng" id="btn1" class="btn  ms-3 mb-3">Back
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+</button>
+</body> -->
+
+
+<body>
+    <div class="text-center">
+        <h1>Edit Products</h1>
+        <form  action="" class="border p-5 my-4 container w-50 mb-5">
+            <input [(ngModel)]="pdata.pname" type="text" placeholder="Product Name" name="pname" id="pdtname" class="form-control mt-3">
+            <input [(ngModel)]="pdata.description" type="text" placeholder="Product Description" name="des" id="d1" class="form-control mt-3">
+            <input [(ngModel)]="pdata.price" type="text" placeholder="Product Price" name="pri" id="d2" class="form-control mt-3">
+            <input [(ngModel)]="pdata.image" type="text" placeholder="Product Image" name="img" id="d3" class="form-control mt-3">
+            <input [(ngModel)]="pdata.rating" type="text" placeholder="Product Rating" name="rate" id="d4" class="form-control mt-3">
+            <input [(ngModel)]="pdata.count" type="text" placeholder="Product Count" name="count" id="d5" class="form-control mt-3">
+            <button (click)="editProduct()" class="btn btn-dark mt-5">Update</button>
+        </form>
+        </div>
+        <button routerLink="/admin-product-mng" id="btn1" class="btn  ms-3 mb-3">Back
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </button>
+</body>

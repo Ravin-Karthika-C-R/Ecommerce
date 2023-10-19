@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<body>
+<div class="container-fluid mb-5">
+    <h1 class="mt-5 mb-3">User Management</h1>
+
+
+      <table class="rwd-table">
+        <tbody>
+          <tr>
+            <th>#</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Actions</th>
+            
+          </tr>
+          <tr *ngFor="let i of users , let j=index">
+            <td data-th="#">
+             {{j+1}}
+            </td>
+            <td data-th="Name">
+              {{i.email}}
+            </td>
+            
+            <td data-th="Password">
+              {{i.psw}}
+            </td>
+            
+            <td>
+              <button (click)="deleteUser(i._id)" class="btn btn-dark mt-2 w-100"> <i class="fa-solid fa-trash fa-xs">Delete</i></button>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+      
+    </div>
+    <button routerLink="/admin-home" id="btn1" class="btn  ms-3 mb-3">Back
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+  </button>
+  </body>

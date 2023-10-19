@@ -1,0 +1,17 @@
+<body>
+    <div class="text-center">
+        <h1>Add New Products</h1>
+        <form [formGroup]="addProductForm" action="" class="border p-5 my-4 container w-50 mb-5">
+            <input formControlName="pname" type="text" placeholder="Product Name" name="pname" id="pdtname" class="form-control mt-3">
+            <input formControlName="description" type="text" placeholder="Product Description" name="pname" id="pdtname" class="form-control mt-3">
+            <input formControlName="price" type="text" placeholder="Product Price" name="pname" id="pdtname" class="form-control mt-3">
+            <input formControlName="image" type="text" placeholder="Product Image" name="pname" id="pdtname" class="form-control mt-3">
+            <input formControlName="rating" type="text" placeholder="Product Rating" name="pname" id="pdtname" class="form-control mt-3">
+            <input formControlName="count" type="text" placeholder="Product Count" name="pname" id="pdtname" class="form-control mt-3">
+            <button (click)="addNewProduct()" class="btn btn-dark mt-5">add</button>
+        </form>
+        </div>
+        <button routerLink="/admin-product-mng" id="btn1" class="btn  ms-3 mb-3">Back
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </button>
+</body>

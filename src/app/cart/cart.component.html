@@ -1,0 +1,94 @@
+<!-- <body>
+ <h1 class="mt-2 text-center">Cart Items</h1>
+  <table class="table container text-center">
+    <thead>
+      <tr class="table-primary">
+        <th>#</th>
+        <th>Product Name</th>
+        <th>Descrption</th>
+        <th>Price</th>
+        <th>Count</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of pdatas, let j=index">
+        <th  scope="row">{{j+1}}</th>
+        <td><h3>
+          {{i.pname}}
+        </h3><br>
+          <img class="w-25" src={{i.image}} alt="" />
+  
+        </td>
+        <td>{{i.description}}</td>
+        <td>{{i.price}}</td>
+        <td>
+          <button (click)="decrement(i._id)" class="btn btn-dark">-</button>
+          <p class="w-25">{{i.quantity}}</p>
+          <button (click)="increment(i._id)" class="btn btn-dark">+</button>
+        </td>
+        <td class="border">
+          <button (click)="remove(i._id)" class="btn btn-danger">remove</button>
+        </td>
+       </tr>
+     
+    </tbody>
+  </table>
+  <h4 class="text-center">
+    Subtotal: {{total}}
+  </h4>
+  <button routerLink="/admin-home" id="btn1" class="btn  ms-3 mb-3">Back
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+</button>
+  
+</body> -->
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<body>
+<div class="container-fluid mb-5 ">
+    <h1 class="mt-5 mb-3">Cart Items</h1>
+      <table class="rwd-table text-center">
+        <tbody>
+          <tr>
+            <th>#</th>
+            <th>Product Name</th>
+            <th>Descrption</th>
+            <th>Price</th>
+            <th>Count</th>
+            <th>Actions</th>
+          </tr>
+          <tr *ngFor="let i of pdatas , let j=index">
+            <td data-th="#">
+             {{j+1}}
+            </td>
+            <td data-th="Name">
+              {{i.pname}}
+              <img style="height: 200px;" src={{i.image}} alt="">
+            </td>  
+            <td data-th="Description">
+              {{i.description}}
+            </td>          
+            <td data-th="Price">
+              {{i.price}}
+            </td>
+            <td data-th="Count"><br>
+              <button (click)="decrement(i._id)" class="btn btn-dark">-</button>
+              <p class="w-25">{{i.quantity}}</p>
+              <button (click)="increment(i._id)" class="btn btn-dark">+</button>
+            </td>
+            <td>
+              <button (click)="remove(i._id)" class="btn btn-dark mt-2 w-100"> <i class="fa-solid fa-trash fa-xs"></i></button>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <h4 class="text-center">
+        Subtotal: {{total}}
+      </h4>
+    </div>
+    <button routerLink="/admin-home" id="btn1" class="btn  ms-3 mb-3">Back
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+  </button>
+  </body>

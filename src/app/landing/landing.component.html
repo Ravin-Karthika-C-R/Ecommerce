@@ -1,0 +1,42 @@
+<div class="div1">
+    <!-- <button class="btn btn-primary ms-5 mt-5 mb-5 text-white">
+    <a style="text-decoration: none; color: aliceblue;" routerLink="admin-login">
+    Login as admin</a>
+</button> -->
+
+<div class="dropdown">
+    <button class="btn btn-dark ms-5 mt-5 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Login As
+    </button>
+    <ul class="dropdown-menu">
+      <li style="background-color: #70c1ff"><a style="text-decoration: none; color: rgb(6, 6, 6);" routerLink="admin-login" class="dropdown-item" >Admin</a></li>
+      <li style="background-color: #70c1ff"><a style="text-decoration: none; color: rgb(15, 16, 16);"  class="dropdown-item" routerLink="user-login">User</a></li>
+    </ul>
+  </div>
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div *ngFor="let i of products " class="col mb-5" >
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img style="height: 250px; width: 100%;" id="card" class="card-img-top" src={{i.image}} alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{i.pname}}</h5>
+                            <!-- Product price-->
+                           Rs. {{i.price}}
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" routerLink="product-view/{{i._id}}">View</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>

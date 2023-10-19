@@ -1,0 +1,28 @@
+<body>
+<div class="container">
+    <div class="card">
+      <h2>Login Form</h2>
+      <form [formGroup]="adminForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username" name="uname"  formControlName="auname">
+        <!-- <div>
+          <p class="text-center text-danger">Accept only characters</p>
+        </div> -->
+        <label for="password">Password</label>
+        <input type="password" id="password" name="pass" placeholder="Enter your password" formControlName="apsw">
+        <!-- <div>
+          <p class="text-center text-danger">Accept only characters and digits</p>
+        </div> -->
+        <button (click)="adminlogin()" type="submit">Login</button>
+      </form>
+    </div>
+    
+  </div>
+  
+</body>
+<div class="back text-center">
+  <button routerLink="" class="btn btn2">Back to home
+    <i class="fa fa-home" aria-hidden="true"></i>
+  </button>
+  
+</div>
