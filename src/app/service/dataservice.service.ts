@@ -10,7 +10,7 @@ export class DataserviceService {
   cartCount=new BehaviorSubject(0)
   login=new BehaviorSubject(false)
 
-baseUrl="http://localhost:5002"
+baseUrl="https://ecommerce-server-xaew.onrender.com"
 
 constructor(private http:HttpClient) {
   this.cartUpdate()
